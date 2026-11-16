@@ -1,0 +1,7 @@
+# Задание 18. Найдите пропуски
+
+import pandas as pd
+
+missing_df = pd.read_csv("students_missing.csv")
+
+print(missing_df.isna())

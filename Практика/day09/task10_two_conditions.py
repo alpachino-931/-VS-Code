@@ -1,0 +1,9 @@
+# Задание 10. Два условия
+
+import pandas as pd
+
+df = pd.read_csv("students.csv")
+
+result = df[(df["Баллы"] >= 75) & (df["Посещено"] >= 16)]
+
+print(result)

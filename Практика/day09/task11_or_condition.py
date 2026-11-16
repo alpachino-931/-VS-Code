@@ -1,0 +1,9 @@
+# Задание 11. Условие ИЛИ
+
+import pandas as pd
+
+df = pd.read_csv("students.csv")
+
+result = df[(df["Баллы"] >= 90) | (df["Посещено"] == 20)]
+
+print(result)

@@ -1,0 +1,10 @@
+# Задание 7. Сортировка среднего балла
+
+import pandas as pd
+
+df = pd.read_csv("students.csv")
+
+result = df.groupby("Группа")["Баллы"].mean().reset_index()
+result = result.sort_values("Баллы", ascending=False)
+
+print(result)
