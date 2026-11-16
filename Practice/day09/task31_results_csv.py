@@ -1,6 +1,9 @@
 # Задание 31. Таблица результатов из CSV
 
+import os
 import pandas as pd
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 df = pd.read_csv("results.csv")
 print(df.shape)

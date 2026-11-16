@@ -1,5 +1,9 @@
 # Задание 25. Список участников
 
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 participants = []
 
 for number in range(1, 4):

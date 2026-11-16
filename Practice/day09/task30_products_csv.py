@@ -1,6 +1,9 @@
 # Задание 30. Таблица товаров из CSV
 
+import os
 import pandas as pd
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 df = pd.read_csv("products.csv")
 df["Стоимость"] = df["Цена"] * df["Количество"]

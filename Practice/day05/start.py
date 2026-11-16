@@ -1,9 +1,10 @@
 # День 5. Циклы и работа с текстовыми файлами
 
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 # Цикл for по списку
-
-
-
 languages = ["Python", "Java", "C++"]
 for language in languages:
     print(language)

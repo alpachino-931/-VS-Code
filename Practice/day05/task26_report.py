@@ -1,5 +1,9 @@
 # Задание 26. Отчет по списку
 
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 scores = [45, 78, 91, 53, 60, 39, 88]
 passed = 0
 failed = 0

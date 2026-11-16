@@ -1,5 +1,9 @@
 # Задание 18. Анкета в файл
 
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 name = input("Введите имя: ")
 surname = input("Введите фамилию: ")
 group = input("Введите группу: ")

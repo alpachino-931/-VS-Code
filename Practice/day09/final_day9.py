@@ -1,6 +1,9 @@
 # Задание 32. Очистка и анализ учебных данных
 
+import os
 import pandas as pd
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 df = pd.read_csv("students_full.csv")
 
