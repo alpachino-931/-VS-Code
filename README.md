@@ -27,9 +27,3 @@ python Practice/day10/task01_mean_by_group.py
 ```
 
 Скрипты сами переходят в свою папку, поэтому запускать можно откуда угодно.
-
-Для дней 9 и 10 нужны библиотеки:
-
-```
-pip install pandas matplotlib
-```
