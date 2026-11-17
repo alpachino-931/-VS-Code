@@ -19,13 +19,13 @@ df.info()
 
 print("=" * 40)
 print("Средний балл по группам:")
-print(df.groupby("Группа")["Баллы"].mean())
+print(df.groupby("Группа")["Баллы"].mean().reset_index())
 print("Минимальный балл:")
-print(df.groupby("Группа")["Баллы"].min())
+print(df.groupby("Группа")["Баллы"].min().reset_index())
 print("Максимальный балл:")
-print(df.groupby("Группа")["Баллы"].max())
+print(df.groupby("Группа")["Баллы"].max().reset_index())
 print("Количество студентов:")
-print(df.groupby("Группа")["Имя"].count())
+print(df.groupby("Группа")["Имя"].count().reset_index())
 
 print("=" * 40)
 summary = df.groupby("Группа").agg(
@@ -36,7 +36,7 @@ summary = df.groupby("Группа").agg(
     Средняя_посещаемость=("Посещено", "mean"),
 )
 summary = summary.reset_index()
-summary = summary.sort_values("Средний_балл", ascending=False)
+summary = summary.sort_values("Средний_балл", ascending=False).reset_index(drop=True)
 print(summary)
 
 summary.to_csv("group_summary.csv", index=False, encoding="utf-8")
@@ -65,7 +65,7 @@ plt.show()
 
 print("=" * 40)
 df["Статус"] = "зачет"
-print(df.groupby(["Группа", "Статус"])["Баллы"].mean())
+print(df.groupby(["Группа", "Статус"])["Баллы"].mean().reset_index())
 
 print("=" * 40)
 print("Студенты с баллом выше среднего:")

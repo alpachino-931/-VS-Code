@@ -7,4 +7,4 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 df = pd.read_csv("students.csv")
 
-print(df.groupby("Группа")["Имя"].count())
+print(df.groupby("Группа")["Имя"].count().reset_index())

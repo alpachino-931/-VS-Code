@@ -10,11 +10,11 @@ df = pd.read_csv("students.csv")
 print(df.head())
 
 print("=" * 40)
-print(df.groupby("Группа")["Баллы"].mean())
-print(df.groupby("Группа")["Баллы"].sum())
-print(df.groupby("Группа")["Баллы"].min())
-print(df.groupby("Группа")["Баллы"].max())
-print(df.groupby("Группа")["Имя"].count())
+print(df.groupby("Группа")["Баллы"].mean().reset_index())
+print(df.groupby("Группа")["Баллы"].sum().reset_index())
+print(df.groupby("Группа")["Баллы"].min().reset_index())
+print(df.groupby("Группа")["Баллы"].max().reset_index())
+print(df.groupby("Группа")["Имя"].count().reset_index())
 
 print("=" * 40)
 stats = df.groupby("Группа")["Баллы"].agg(["mean", "min", "max", "count"])
@@ -26,11 +26,11 @@ print(result)
 
 print("=" * 40)
 df["Статус"] = "зачет"
-print(df.groupby(["Группа", "Статус"])["Баллы"].mean())
+print(df.groupby(["Группа", "Статус"])["Баллы"].mean().reset_index())
 
 print("=" * 40)
 result = df.groupby("Группа")["Баллы"].mean().reset_index()
-result = result.sort_values("Баллы", ascending=False)
+result = result.sort_values("Баллы", ascending=False).reset_index(drop=True)
 print(result)
 result.to_csv("group_result.csv", index=False, encoding="utf-8")
 
