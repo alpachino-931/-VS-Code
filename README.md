@@ -16,7 +16,6 @@
 | `Practice/day08` | Pandas: Series и DataFrame |
 | `Practice/day09` | Pandas: CSV, фильтрация, пропуски |
 | `Practice/day10` | Pandas: groupby и графики |
-| `Practice/day16` | RAG: подготовка корпуса документов |
 
 В каждой папке лежат файлы по заданиям и итоговая работа `final_dayN.py`.
 Результаты сохраняются рядом: таблицы в CSV, графики в PNG.
